@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>模拟alert和confirm提示框</title>
+    <link rel="stylesheet" href="msgbox.css">
+</head>
+
+<body>
+    <input id="confirm" type="button" value="confirm"/>
+    
+    <input id="confirm-callback" type="button" value="confirm callback"/>
+</body>
+</html>
+
+<script src="___jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="_msg-confirm.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $("#confirm").bind("click", function () {
+        $.MsgBox.Alert("提示", "哈哈，添加成功！");
+    });
+
+    $("#confirm-callback").bind("click", function () {
+        $.MsgBox.Confirm("提示", "确定要进行修改吗？", function () {
+            window.location.href = 'https://www.cnblogs.com/tonnytong/p/7878814.html';
+        });
+    });
+
+</script>
