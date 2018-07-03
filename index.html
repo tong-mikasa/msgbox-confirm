@@ -13,7 +13,34 @@
 </body>
 </html>
 
+<!--
+<script type="text/x-handlebars-template" id="tpl_confirm_msgbox">
+    <div class="confirm-msgbox-popup-wrap">
+        <div class="confirm-mask-bg"></div>
+        <div id="confirm_content_wrap">
+            <div class="msg-in">
+                <div id="msg_header" class="text-center">
+                    <span id="msg_title">{{title}}</span>
+                </div>
+                <div id="msg_msg" class="text-center">
+                    {{msg}}
+                </div>
+                <div id="msg_btn_wrap" class="text-center">
+                    <input id="msg_btn_ok" class="msg-btn" type="button" value="确定">
+
+                    {{#ifCond type '==' 'confirm'}}
+                    <input id="msg_btn_no" class="msg-btn" type="button" value="取消">
+                    {{/ifCond}}
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+-->
+
 <script src="___jquery-1.12.0.min.js" type="text/javascript"></script>
+<!--<script src="_handlebars-v4.0.5.js" type="text/javascript"></script>
+<script src="__handlebars.functions.js" type="text/javascript"></script>-->
 <script src="_msg-confirm.js" type="text/javascript"></script>
 
 <script type="text/javascript">
