@@ -11,6 +11,12 @@
             //$("body").append(Handlebars.compile(this._tplMsgHtm)({type: "confirm", title: title, msg: msg}));
             this._btnMsgOk(callback);
             this._btnMsgNo(cancelCallback);
+        },        
+        CustomizeConfirm: function (title, msg, leftButtonText,rightButtonText,callback,cancelCallback) {
+            this._generateMsgboxHtml("confirm", title, msg,leftButtonText,rightButtonText);
+            //$("body").append(Handlebars.compile(this._tplMsgHtm)({type: "confirm", title: title, msg: msg}));
+            this._btnMsgOk(callback);
+            this._btnMsgNo(cancelCallback);
         },
         _tplMsgHtm: $("#tpl_confirm_msgbox").html(),
         _btnMsgOk: function(callback) {
@@ -31,7 +37,10 @@
                 }
             });
         },
-        _generateMsgboxHtml: function (type, title, msg) {
+        _generateMsgboxHtml: function (type, title, msg,leftButtonText,rightButtonText) {
+            var okButtonText = (typeof leftButtonText == "undefined") ? '确定' : leftButtonText
+                , noButtonText = (typeof rightButtonText == "undefined")  ? '取消': rightButtonText;
+            
             var strHtm ='<div class="confirm-msgbox-popup-wrap">' +
                 '            <div class="confirm-mask-bg"></div>' +
                 '            <div id="confirm_content_wrap">' +
@@ -41,10 +50,10 @@
                 '                    </div>' +
                 '                    <div id="msg_msg" class="text-center">' + msg + '</div>' +
                 '                    <div id="msg_btn_wrap" class="text-center">' +
-                '                        <input id="msg_btn_ok" class="msg-btn" type="button" value="确定">';
+                '                        <input id="msg_btn_ok" class="msg-btn" type="button" value="'+okButtonText+'">';
 
                 if(type == "confirm"){
-                    strHtm +='<input id="msg_btn_no" class="msg-btn" type="button" value="取消">';
+                    strHtm +='<input id="msg_btn_no" class="msg-btn" type="button" value="'+noButtonText+'">';
                 }
 
                 strHtm +='           </div>' +
