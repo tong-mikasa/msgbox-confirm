@@ -69,28 +69,3 @@
         }
     };
 })(jQuery);
-
-/*
-<script type="text/x-handlebars-template" id="tpl_confirm_msgbox">
-    <div class="confirm-msgbox-popup-wrap">
-        <div class="confirm-mask-bg"></div>
-        <div id="confirm_content_wrap">
-            <div class="msg-in">
-                <div id="msg_header" class="text-center">
-                    <span id="msg_title">{{title}}</span>
-                </div>
-                <div id="msg_msg" class="text-center">
-                    {{msg}}
-                </div>
-                <div id="msg_btn_wrap" class="text-center">
-                    <span id="msg_btn_ok" class="msg-btn cursor-point">xxx</span>
-
-                    {{#ifCond type '==' 'confirm'}}
-                    <span id="msg_btn_no" class="msg-btn cursor-point">xxx</span>
-                    {{/ifCond}}
-                </div>
-            </div>
-        </div>
-    </div>
-</script>
-*/
