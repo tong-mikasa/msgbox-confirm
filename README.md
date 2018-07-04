@@ -11,7 +11,7 @@ set confirm style customize
       console.log('dddd');
   });
 
-  $.MsgBox.CustomizeConfirm("提示","请输入xxx","重试","完成",function () {
+  $.MsgBox.CustomizeConfirm("提示","请输入xxx","button1","button2",function () {
     console.log('dddd');
   },function () {
     console.log(1231);
