@@ -6,11 +6,11 @@
             this._btnMsgOk();
             this._btnMsgNo();
         },
-        Confirm: function (title, msg, callback) {
+        Confirm: function (title, msg, callback, cancelCallback) {
             this._generateMsgboxHtml("confirm", title, msg);
             //$("body").append(Handlebars.compile(this._tplMsgHtm)({type: "confirm", title: title, msg: msg}));
             this._btnMsgOk(callback);
-            this._btnMsgNo();
+            this._btnMsgNo(cancelCallback);
         },
         _tplMsgHtm: $("#tpl_confirm_msgbox").html(),
         _btnMsgOk: function(callback) {
@@ -22,10 +22,13 @@
                 }
             });
         },
-        _btnMsgNo: function() {
+        _btnMsgNo: function(cancelCallback) {
             var that = this;
             $("#msg_btn_no").click(function () {
                 that._removeMsgboxPopupWrap();
+                if (cancelCallback && typeof (cancelCallback) == 'function') {
+                    cancelCallback();
+                }
             });
         },
         _generateMsgboxHtml: function (type, title, msg) {
