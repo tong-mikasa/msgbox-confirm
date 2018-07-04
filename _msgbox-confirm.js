@@ -60,7 +60,8 @@
                 '                </div>' +
                 '            </div>' +
                 '        </div>';
-
+            
+            this._removeMsgboxPopupWrap();
             $("body").append(strHtm);
         },
         _removeMsgboxPopupWrap: function(){
