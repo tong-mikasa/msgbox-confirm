@@ -1,0 +1,86 @@
+.confirm-msgbox-popup-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9990;
+  width: 100%;
+  height: 100%; }
+  .confirm-msgbox-popup-wrap .col-full {
+    width: 100%; }
+  .confirm-msgbox-popup-wrap .col-half {
+    width: 50%; }
+  .confirm-msgbox-popup-wrap .cursor-point {
+    cursor: pointer; }
+  .confirm-msgbox-popup-wrap .confirm-mask-bg {
+    position: absolute;
+    z-index: 9991;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); }
+  .confirm-msgbox-popup-wrap #confirm_content_wrap {
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 250px;
+    margin: -125px 0 0 -200px; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap .msg-in {
+      background: #ffffff;
+      border-radius: 14px;
+      -webkit-border-radius: 14px;
+      -moz-border-radius: 14px; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap #msg_header {
+      padding-top: 15px;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap #msg_title {
+      color: #333333;
+      text-align: center;
+      padding: 10px 0 10px;
+      font-size: 20px;
+      font-weight: bold; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap #msg_msg {
+      color: #000000;
+      padding: 20px;
+      vertical-align: middle;
+      font-size: 16px;
+      line-height: 1.4;
+      max-height: 100px;
+      overflow-y: auto; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap #msg_btn_wrap {
+      border-top: 1px solid #e6e6e5; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap .msg-btn {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      display: inline-block;
+      font-size: 15px;
+      color: #ffffff;
+      border: none;
+      border-right: 1px solid #e6e6e5; }
+      .confirm-msgbox-popup-wrap #confirm_content_wrap .msg-btn:last-child {
+        border: none; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap #msg_btn_ok {
+      color: #0079FF; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap #msg_btn_no {
+      color: rgba(0, 0, 0, 0.9); }
+
+@media screen and (max-width: 1000px) {
+  .confirm-msgbox-popup-wrap #confirm_content_wrap {
+    left: 10%;
+    right: 10%;
+    width: auto;
+    margin: -125px 0 0 0; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap #msg_title {
+      font-size: 30px; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap #msg_msg {
+      padding: 30px;
+      font-size: 28px; }
+    .confirm-msgbox-popup-wrap #confirm_content_wrap .msg-btn {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 28px; } }
+
+/*# sourceMappingURL=msgbox-confirm.css.map */
