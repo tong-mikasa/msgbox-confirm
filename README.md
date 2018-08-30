@@ -6,13 +6,18 @@
 
 # example
   $.MsgBox.Alert("提示","请输入xxx");
+  $.MsgBox.Alert("提示","请输入xxx",function(){
+      console.log("ok callback");
+  });
   
   $.MsgBox.Confirm("提示","请输入xxx",function () {
-      console.log('dddd');
+       console.log("ok callback");
+  },function(){
+       console.log("cancel callback");
   });
 
   $.MsgBox.CustomizeConfirm("提示","请输入xxx","button1","button2",function () {
-    console.log('dddd');
+    console.log('left callback');
   },function () {
-    console.log(1231);
+    console.log('right callback');
   });
