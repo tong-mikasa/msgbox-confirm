@@ -7,7 +7,6 @@
 # example
 
 <pre><code>
-
   $.MsgBox.Alert("提示","请输入xxx");
   
   $.MsgBox.Alert("提示","请输入xxx",function(){
