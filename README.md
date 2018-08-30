@@ -5,7 +5,11 @@
   
 
 # example
+
+<pre><code>
+
   $.MsgBox.Alert("提示","请输入xxx");
+  
   $.MsgBox.Alert("提示","请输入xxx",function(){
       console.log("ok callback");
   });
@@ -16,8 +20,11 @@
        console.log("cancel callback");
   });
 
-  $.MsgBox.CustomizeConfirm("提示","请输入xxx","button1","button2",function () {
+  $.MsgBox.CustomizeConfirm("提示","请输入xxx","left button","right button",function () {
     console.log('left callback');
   },function () {
     console.log('right callback');
   });
+
+</code></pre>
+ 
