@@ -3,6 +3,9 @@
     left: 0;
     top: 0;
     z-index: 9990;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     .col-full{
@@ -26,11 +29,8 @@
     #confirm_content_wrap{
         position: absolute;
         z-index: 9999;
-        left: 50%;
-        top: 50%;
         width: 400px;
         height: 250px;
-        margin: -125px 0 0 -200px;
 
         .msg-in{
             background: #ffffff;
@@ -52,22 +52,24 @@
         }
         #msg_msg{
             color: #000000;
-            padding: 20px;
+            padding: 15px;
             vertical-align: middle;
             font-size: 16px;
             line-height: 1.4;
-            max-height: 100px;
+            max-height: 160px;
             overflow-y: auto;
         }
         #msg_btn_wrap{
+            display: flex;
             border-top: 1px solid #e6e6e5;
         }
         .msg-btn{
+            flex:1;
             padding-top: 12px;
             padding-bottom: 12px;
             display: inline-block;
             font-size: 15px;
-            color: #ffffff;
+            color: #444444;
             border: none;
             border-right: 1px solid #e6e6e5;
 
@@ -75,11 +77,11 @@
                 border: none;
             }
         }
-        #msg_btn_ok{
-            color: #0079FF;
+        .msg-ok{
+            color: #22B07B;
         }
-        #msg_btn_no{
-            color: rgba(0, 0, 0, 0.9);
+        .msg-no{
+            color: #444444;
         }
     }
 }
@@ -87,18 +89,19 @@
 
 @media screen and (max-width: 1000px) {
     .confirm-msgbox-popup-wrap{
+
         #confirm_content_wrap{
             left: 10%;
             right: 10%;
             width: auto;
-            margin: -125px 0 0 0;
+            height:auto;
 
             #msg_title{
                 font-size: 30px;
             }
 
             #msg_msg{
-                padding: 30px;
+                padding: 15px;
                 font-size: 28px;
             }
             .msg-btn{
